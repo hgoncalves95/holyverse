@@ -75,7 +75,7 @@ botoes.forEach(botao => {
     loading.classList.remove('hidden');
     resultado.style.display = "block";
 
-    fetch(`http://127.0.0.1:5000/versiculo/${sentimento}`)
+    fetch(`https://holyverse-backend.onrender.com/versiculo/${sentimento}`)
       .then(res => res.json())
       .then(data => mostrarVersiculo(data.versiculo));
   });
@@ -97,7 +97,7 @@ function buscarIA() {
   loading.classList.remove('hidden');
   resultado.style.display = "block";
 
-  fetch('http://127.0.0.1:5000/analisar', {
+  fetch('https://holyverse-backend.onrender.com/analisar', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
