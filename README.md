@@ -4,7 +4,7 @@ O **HolyVerse** é um projeto web que entrega versículos bíblicos personalizad
 
 ## 🚀 Acesse o projeto
 
-👉 https://SEU-USUARIO.github.io/holyverse
+👉 https://hgoncalves95.github.io/holyverse/
 
 ---
 
