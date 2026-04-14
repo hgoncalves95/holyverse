@@ -8,13 +8,18 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: #020617;
   color: #fff;
+
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
+  align-items: flex-start;
+
+  min-height: 100vh;
+  padding: 20px;
+
+  overflow-y: auto;
 }
 
+/* FUNDO */
 #bg {
   position: fixed;
   top: 0;
@@ -29,10 +34,11 @@ body {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(25px);
   border-radius: 25px;
-  padding: 40px;
+  padding: 35px 25px;
   text-align: center;
-  width: 90%;
+  width: 100%;
   max-width: 500px;
+
   border: 1px solid rgba(96,165,250,0.2);
 
   box-shadow:
@@ -41,11 +47,13 @@ body {
     inset 0 0 20px rgba(255,255,255,0.05);
 }
 
-/* ESPAÇAMENTO */
+/* TÍTULO */
 .hero h1 {
   margin-bottom: 15px;
+  font-size: 1.8rem;
 }
 
+/* TEXTO */
 .hero p {
   margin: 20px 0;
   font-size: 0.95rem;
@@ -61,12 +69,13 @@ body {
 
 .input-area input {
   flex: 1;
-  padding: 10px;
+  padding: 12px;
   border-radius: 10px;
   border: none;
   background: #0f172a;
   color: white;
   border: 1px solid rgba(96,165,250,0.3);
+  font-size: 0.9rem;
 }
 
 .input-area input::placeholder {
@@ -76,11 +85,12 @@ body {
 #buscarIA {
   background: linear-gradient(135deg, #3b82f6, #60a5fa);
   border: none;
-  padding: 10px 15px;
+  padding: 12px 15px;
   border-radius: 10px;
   color: #020617;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 #buscarIA:hover {
@@ -91,31 +101,37 @@ body {
 .sentimentos {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
   justify-content: center;
 }
 
 .sentimentos button {
+  flex: 1 1 45%;
+
   border: none;
-  padding: 10px 18px;
+  padding: 12px;
   border-radius: 25px;
   cursor: pointer;
+
   background: linear-gradient(135deg, #3b82f6, #60a5fa);
   color: #020617;
   font-weight: bold;
+
+  transition: all 0.3s ease;
 }
 
 .sentimentos button:hover {
-  transform: translateY(-5px) scale(1.08);
+  transform: translateY(-3px) scale(1.05);
   box-shadow: 0 0 20px rgba(96,165,250,0.7);
 }
 
-/* RESULTADO (🔥 ESCONDIDO) */
+/* RESULTADO (ESCONDIDO INICIALMENTE) */
 #resultado {
   display: none;
   margin-top: 30px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #93c5fd;
+  line-height: 1.5;
 }
 
 /* AÇÕES */
@@ -123,16 +139,22 @@ body {
   margin-top: 20px;
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .acoes button {
+  flex: 1 1 30%;
+
   background: #0f172a;
   border: 1px solid rgba(96,165,250,0.2);
   color: white;
-  padding: 8px 14px;
+
+  padding: 10px;
   border-radius: 20px;
   cursor: pointer;
+
+  transition: 0.3s;
 }
 
 .acoes button:hover {
@@ -145,11 +167,19 @@ h3 {
   color: #60a5fa;
 }
 
+#favoritos {
+  margin-top: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
 #favoritos li {
   background: rgba(15,23,42,0.7);
-  padding: 8px;
+  padding: 10px;
   border-radius: 10px;
   margin-bottom: 8px;
+  font-size: 0.9rem;
 }
 
 /* LOADING */
@@ -181,4 +211,31 @@ h3 {
 .show {
   opacity: 1;
   transition: 0.5s;
+}
+
+/* 🔥 MOBILE EXTRA */
+@media (max-width: 480px) {
+  .hero {
+    padding: 25px 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .input-area {
+    flex-direction: column;
+  }
+
+  #buscarIA {
+    width: 100%;
+  }
+
+  .sentimentos button {
+    flex: 1 1 100%;
+  }
+
+  .acoes button {
+    flex: 1 1 100%;
+  }
 }
