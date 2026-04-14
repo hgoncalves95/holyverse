@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>HolyVerse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bg"></canvas>
+
+<section class="hero">
+  <h1>HOLYVERSE</h1>
+
+  <div class="input-area">
+    <input type="text" id="inputSentimento" placeholder="Digite como você está se sentindo...">
+    <button id="buscarIA">Buscar</button>
+  </div>
+
+  <p>OU ESCOLHA UMA OPÇÃO:</p>
+
+  <div class="sentimentos">
+    <button data-sentimento="tristeza">Tristeza</button>
+    <button data-sentimento="ansiedade">Ansiedade</button>
+    <button data-sentimento="medo">Medo</button>
+    <button data-sentimento="gratidao">Gratidão</button>
+    <button data-sentimento="cansaco">Cansaço</button>
+    <button data-sentimento="alegria">Alegria</button>
+  </div>
+
+  <div id="resultado">
+    <span id="texto"></span>
+    <div id="loading" class="loading hidden"></div>
+  </div>
+
+  <div class="acoes">
+    <button id="copiar">Copiar</button>
+    <button id="whatsapp">WhatsApp</button>
+    <button id="favoritar">Favoritar</button>
+  </div>
+
+  <h3>Favoritos</h3>
+  <ul id="favoritos"></ul>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
