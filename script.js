@@ -77,7 +77,15 @@ botoes.forEach(botao => {
 
     fetch(`https://holyverse-backend.onrender.com/versiculo/${sentimento}`)
       .then(res => res.json())
-      .then(data => mostrarVersiculo(data.versiculo));
+      .then(data => {
+        if (data.erro) {
+          loading.classList.add('hidden');
+          texto.innerText = data.erro;
+          return;
+        }
+
+        mostrarVersiculo(data.versiculo);
+      });
   });
 });
 
@@ -105,7 +113,15 @@ function buscarIA() {
     body: JSON.stringify({ texto: textoUser })
   })
   .then(res => res.json())
-  .then(data => mostrarVersiculo(data.versiculo));
+  .then(data => {
+    if (data.erro) {
+      loading.classList.add('hidden');
+      texto.innerText = data.erro;
+      return;
+    }
+
+    mostrarVersiculo(data.versiculo);
+  });
 }
 
 // copiar
