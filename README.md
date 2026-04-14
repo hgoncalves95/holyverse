@@ -1,110 +1,66 @@
-# ⚙️ HolyVerse API — Backend
+# 🌌 HolyVerse — Versículos para sua alma
 
-API desenvolvida em Python com Flask para fornecer versículos bíblicos baseados no estado emocional do usuário.
+O **HolyVerse** é um projeto web que entrega versículos bíblicos personalizados com base no que a pessoa está sentindo.
 
----
+## 🚀 Acesse o projeto
 
-## 🚀 API ONLINE
-
-👉 https://holyverse-backend.onrender.com
+👉 https://SEU-USUARIO.github.io/holyverse
 
 ---
 
-## 🔥 Funcionalidades
+## ✨ Funcionalidades
 
-* 📖 Retorna versículos por sentimento
-* 🤖 Analisa texto do usuário (IA simples)
-* 🎯 Seleciona versículo aleatório
-* 🌐 API REST
-
----
-
-## 🛠️ Tecnologias
-
-* Python
-* Flask
-* Flask-CORS
-* Gunicorn
+* 🔘 Escolha de sentimentos (tristeza, ansiedade, alegria, etc)
+* 🤖 Entrada de texto com análise de sentimento (IA simples)
+* 📖 Exibição de versículos bíblicos personalizados
+* 📋 Copiar versículo
+* 💬 Compartilhar no WhatsApp
+* ⭐ Salvar versículos favoritos (LocalStorage)
 
 ---
 
-## 📡 Endpoints
+## 🛠️ Tecnologias utilizadas
 
-### 🔹 Buscar versículo por sentimento
-
-```
-GET /versiculo/<sentimento>
-```
-
-Exemplo:
-
-```
-/versiculo/tristeza
-```
+* HTML5
+* CSS3 (Glassmorphism + animações)
+* JavaScript (Fetch API)
+* Integração com API (backend em Python)
 
 ---
 
-### 🔹 Analisar texto (IA simples)
+## 🎨 Interface
 
-```
-POST /analisar
-```
-
-Body:
-
-```json
-{
-  "texto": "estou muito cansado"
-}
-```
-
-Resposta:
-
-```json
-{
-  "sentimento": "cansaco",
-  "versiculo": "..."
-}
-```
+* Tema escuro moderno
+* Efeitos visuais com partículas
+* Animações suaves
+* Layout responsivo
 
 ---
 
-## 🧠 Lógica de IA
+## 🔗 Integração com Backend
 
-O sistema utiliza detecção de palavras-chave para identificar sentimentos como:
+O frontend consome dados da API hospedada no Render:
 
-* tristeza
-* ansiedade
-* medo
-* cansaço
-* gratidão
-* alegria
+* GET `/versiculo/<sentimento>`
+* POST `/analisar`
 
 ---
 
-## 📁 Estrutura
+## 📁 Estrutura do projeto
 
 ```
-holyverse-backend/
-│── app.py
+holyverse/
+│── index.html
+│── style.css
+│── script.js
 │── versiculos.json
-│── requirements.txt
-```
-
----
-
-## ⚙️ Como rodar localmente
-
-```bash
-pip install -r requirements.txt
-python app.py
 ```
 
 ---
 
 ## 📌 Objetivo
 
-Fornecer uma API simples e eficiente para conectar usuários a versículos bíblicos personalizados.
+Criar uma experiência simples e acessível para conectar pessoas à Palavra de Deus de acordo com seus sentimentos.
 
 ---
 
